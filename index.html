@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milano Cortina 2026 Medal Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0b132b;
+            color: #ffffff;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tab-active {
+            border-bottom: 3px solid #00f2ff;
+            color: #00f2ff;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen pb-12">
+
+    <header class="py-10 text-center border-b border-white/10 mb-8">
+        <h1
+            class="text-4xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+            MILANO CORTINA 2026
+        </h1>
+        <p class="text-slate-400 mt-2 uppercase text-xs tracking-tighter">Olympic Winter Games • Medal
+            Centre(INDEPENDENT NATIONS VERSION)</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4">
+        <div class="flex gap-8 mb-8 border-b border-white/10 text-sm font-bold uppercase tracking-widest">
+            <button onclick="showSection('table')" id="btn-table" class="pb-4 tab-active transition-all">Official
+                Table</button>
+            <button onclick="showSection('medalists')" id="btn-medalists"
+                class="pb-4 text-slate-500 hover:text-white transition-all">Medallists</button>
+            <button onclick="showSection('independent')" id="btn-independent"
+                class="pb-4 text-slate-500 hover:text-white transition-all">Independent Nations</button>
+        </div>
+
+        <section id="sec-table" class="glass rounded-2xl overflow-hidden">
+            <table class="w-full text-left">
+                <thead class="text-xs text-slate-400 uppercase bg-white/5">
+                    <tr>
+                        <th class="p-5">Rank</th>
+                        <th class="p-5">Country</th>
+                        <th class="p-5 text-center">Gold</th>
+                        <th class="p-5 text-center">Silver</th>
+                        <th class="p-5 text-center">Bronze</th>
+                        <th class="p-5 text-center bg-white/5">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="medal-table-rows" class="text-sm">
+                </tbody>
+            </table>
+        </section>
+
+        <section id="sec-independent" class="hidden glass rounded-2xl overflow-hidden">
+            <table class="w-full text-left">
+                <thead class="text-xs text-slate-400 uppercase bg-white/5">
+                    <tr>
+                        <th class="p-5">Rank</th>
+                        <th class="p-5">Nations</th>
+                        <th class="p-5 text-center">Gold</th>
+                        <th class="p-5 text-center">Silver</th>
+                        <th class="p-5 text-center">Bronze</th>
+                        <th class="p-5 text-center bg-white/5">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="independent-table-rows" class="text-sm">
+                </tbody>
+            </table>
+        </section>
+
+        <section id="sec-medalists" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4">
+        </section>
+    </main>
+
+    <script>
+        let flagData = {};
+
+        function getFlag(noc) {
+            // Special handling for Quebec - use local SVG file
+            if (noc === 'QUE') {
+                return `<img src="Flag_of_Quebec.svg" class="w-6 h-4 object-cover rounded-sm opacity-80" alt="QUE">`;
+            }
+
+            // Special handling for other regional flags using flag-icons library
+            const regionalFlags = {
+                'CAT': 'es-ct',
+                'SCO': 'gb-sct'
+            };
+
+            // NOC code overrides for countries with mismatched codes
+            const nocOverrides = {
+                'ZAF': 'za'  // South Africa (NOC uses ZAF, but flag code is za)
+            };
+
+            if (regionalFlags[noc]) {
+                return `<span class="fi fi-${regionalFlags[noc]}" style="width: 24px; height: 16px; display: inline-block; font-size: 16px;"></span>`;
+            }
+
+            const code = nocOverrides[noc] || flagData[noc] || 'xx';
+            return `<img src="https://flagcdn.com/w40/${code}.png" class="w-6 h-4 object-cover rounded-sm opacity-80" alt="${noc}">`;
+        }
+
+        let athleteLookup = {};
+        let independentsData = null;
+
+        // Extract last name from athlete name for matching
+        function extractLastName(name) {
+            // Handle formats like "V. MALTAIS", "MALTAIS", "Marie-Philip Poulin"
+            const parts = name.trim().split(/\s+/);
+            return parts[parts.length - 1].toUpperCase();
+        }
+
+        // Build athlete lookup map from independents.json
+        function buildAthleteLookup(independents) {
+            const lookup = {};
+            const data = independents.winter_olympics_2026;
+
+            // Quebec athletes -> QUE
+            data.quebec_canada.forEach(athlete => {
+                const lastName = extractLastName(athlete.name);
+                lookup[lastName] = 'QUE';
+            });
+
+            // Catalonia athletes -> CAT
+            data.catalonia_spain.forEach(athlete => {
+                const lastName = extractLastName(athlete.name);
+                lookup[lastName] = 'CAT';
+            });
+
+            // Scotland athletes -> SCO
+            data.scotland_uk.forEach(athlete => {
+                const lastName = extractLastName(athlete.name);
+                lookup[lastName] = 'SCO';
+            });
+
+            return lookup;
+        }
+
+        // Calculate re-attributed medals for independent nations
+        function calculateReattributedMedals(medalTable, medallists, athleteLookup) {
+            // Parent country to independent nation mapping
+            const parentToIndependent = {
+                'CAN': 'QUE',
+                'ESP': 'CAT',
+                'GBR': 'SCO'
+            };
+
+            // Count re-attributed medals
+            const reattributions = {
+                'CAN': { gold: 0, silver: 0, bronze: 0 },
+                'ESP': { gold: 0, silver: 0, bronze: 0 },
+                'GBR': { gold: 0, silver: 0, bronze: 0 },
+                'QUE': { gold: 0, silver: 0, bronze: 0 },
+                'CAT': { gold: 0, silver: 0, bronze: 0 },
+                'SCO': { gold: 0, silver: 0, bronze: 0 }
+            };
+
+            // Track unique medals by event to avoid counting team medals multiple times
+            const processedMedals = new Set();
+
+            // Process each medallist
+            medallists.forEach(medallist => {
+                const lastName = extractLastName(medallist.name);
+                const independentNOC = athleteLookup[lastName];
+
+                // If athlete is from an independent nation
+                if (independentNOC && parentToIndependent[medallist.noc] === independentNOC) {
+                    // Create unique key for this medal (event + medal type + parent NOC)
+                    const medalKey = `${medallist.event}-${medallist.medal}-${medallist.noc}`;
+
+                    // Only count this medal if we haven't processed it yet
+                    if (!processedMedals.has(medalKey)) {
+                        processedMedals.add(medalKey);
+                        const medalType = medallist.medal.toLowerCase();
+
+                        // Add to independent nation
+                        reattributions[independentNOC][medalType]++;
+
+                        // Subtract from parent country
+                        reattributions[medallist.noc][medalType]--;
+                    }
+                }
+            });
+
+            // Create new medal table with re-attributed counts
+            const reattributedTable = medalTable.map(country => {
+                const noc = country.noc;
+                if (reattributions[noc]) {
+                    return {
+                        ...country,
+                        gold: Math.max(0, country.gold + reattributions[noc].gold),
+                        silver: Math.max(0, country.silver + reattributions[noc].silver),
+                        bronze: Math.max(0, country.bronze + reattributions[noc].bronze),
+                        total: Math.max(0, country.total + reattributions[noc].gold + reattributions[noc].silver + reattributions[noc].bronze)
+                    };
+                }
+                return country;
+            });
+
+            // Sort by gold, then silver, then bronze
+            reattributedTable.sort((a, b) => {
+                if (b.gold !== a.gold) return b.gold - a.gold;
+                if (b.silver !== a.silver) return b.silver - a.silver;
+                if (b.bronze !== a.bronze) return b.bronze - a.bronze;
+                return b.total - a.total;
+            });
+
+            // Update ranks
+            reattributedTable.forEach((country, index) => {
+                country.rank = index + 1;
+            });
+
+            return reattributedTable;
+        }
+
+        async function init() {
+            // Load all three JSON files
+            const [updatesRes, independentsRes, medallistsRes] = await Promise.all([
+                fetch('updates.json'),
+                fetch('independents.json'),
+                fetch('medallists.json')
+            ]);
+
+            const data = await updatesRes.json();
+            independentsData = await independentsRes.json();
+            const medallists = await medallistsRes.json();
+
+            flagData = data.nations;
+            athleteLookup = buildAthleteLookup(independentsData);
+
+            // Render Official Medal Table (unchanged)
+            const tableBody = document.getElementById('medal-table-rows');
+            data.medalTable.slice(0, 25).forEach(c => {
+                tableBody.innerHTML += `
+                <tr class="border-b border-white/5 hover:bg-white/10 transition-colors">
+                    <td class="p-5 font-light">${c.rank}</td>
+                    <td class="p-5 font-bold">
+                        <div class="flex items-center gap-3">
+                            ${getFlag(c.noc)}
+                            <div><span class="text-cyan-400 mr-2">${c.noc}</span> ${c.country}</div>
+                        </div>
+                    </td>
+                    <td class="p-5 text-center text-yellow-500 font-bold">${c.gold}</td>
+                    <td class="p-5 text-center text-slate-300 font-bold">${c.silver}</td>
+                    <td class="p-5 text-center text-orange-400 font-bold">${c.bronze}</td>
+                    <td class="p-5 text-center bg-white/5 font-black">${c.total}</td>
+                </tr>
+            `;
+            });
+
+            // Calculate re-attributed medals for Independent Nations
+            const reattributedTable = calculateReattributedMedals(
+                data.independentNations,
+                medallists,
+                athleteLookup
+            );
+
+            // Render Independent Nations Table with re-attributed medals
+            const indepBody = document.getElementById('independent-table-rows');
+            reattributedTable.slice(0, 25).forEach(c => {
+                indepBody.innerHTML += `
+                <tr class="border-b border-white/5 hover:bg-white/10 transition-colors">
+                    <td class="p-5 font-light">${c.rank}</td>
+                    <td class="p-5 font-bold">
+                        <div class="flex items-center gap-3">
+                            ${getFlag(c.noc)}
+                            <div><span class="text-cyan-400 mr-2">${c.noc}</span> ${c.country}</div>
+                        </div>
+                    </td>
+                    <td class="p-5 text-center text-yellow-500 font-bold">${c.gold}</td>
+                    <td class="p-5 text-center text-slate-300 font-bold">${c.silver}</td>
+                    <td class="p-5 text-center text-orange-400 font-bold">${c.bronze}</td>
+                    <td class="p-5 text-center bg-white/5 font-black">${c.total}</td>
+                </tr>
+            `;
+            });
+
+            // Render Medalist Cards (ONLY CAN/GBR/ESP)
+            const medGrid = document.getElementById('sec-medalists');
+            const relevantNOCs = ['CAN', 'GBR', 'ESP'];
+
+            medallists
+                .filter(m => relevantNOCs.includes(m.noc))
+                .forEach(m => {
+                    const color = m.medal === 'Gold' ? 'border-yellow-500' : (m.medal === 'Silver' ? 'border-slate-300' : 'border-orange-500');
+
+                    // Check if athlete is from Quebec/Catalonia/Scotland
+                    const lastName = extractLastName(m.name);
+                    const independentNOC = athleteLookup[lastName];
+
+                    // Add small flag indicator if from independent nation
+                    let flagIndicator = '';
+                    if (independentNOC === 'QUE') {
+                        flagIndicator = ' <img src="Flag_of_Quebec.svg" class="inline-block w-5 h-3 ml-1 opacity-90 align-middle" alt="QUE">';
+                    } else if (independentNOC === 'CAT') {
+                        flagIndicator = ' <span class="fi fi-es-ct inline-block ml-1 align-middle" style="width: 20px; height: 13px; font-size: 13px;"></span>';
+                    } else if (independentNOC === 'SCO') {
+                        flagIndicator = ' <span class="fi fi-gb-sct inline-block ml-1 align-middle" style="width: 20px; height: 13px; font-size: 13px;"></span>';
+                    }
+
+                    medGrid.innerHTML += `
+                    <div class="glass p-6 rounded-xl border-l-4 ${color}">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-black text-lg">${m.name}${flagIndicator}</h3>
+                                <p class="text-xs text-slate-400 uppercase mt-1">${m.event}</p>
+                            </div>
+                            <span class="text-xs font-black px-2 py-1 bg-white/10 rounded">${m.noc}</span>
+                        </div>
+                        <div class="mt-4 text-xs font-bold text-cyan-400 uppercase tracking-widest">${m.medal} Medalist</div>
+                    </div>
+                `;
+                });
+        }
+
+        function showSection(type) {
+            const sections = {
+                'table': document.getElementById('sec-table'),
+                'medalists': document.getElementById('sec-medalists'),
+                'independent': document.getElementById('sec-independent')
+            };
+            const buttons = {
+                'table': document.getElementById('btn-table'),
+                'medalists': document.getElementById('btn-medalists'),
+                'independent': document.getElementById('btn-independent')
+            };
+
+            // Hide all
+            Object.values(sections).forEach(el => el.classList.add('hidden'));
+            Object.values(buttons).forEach(el => { el.classList.remove('tab-active'); el.classList.add('text-slate-500'); });
+
+            // Show active
+            sections[type].classList.remove('hidden');
+            buttons[type].classList.add('tab-active');
+            buttons[type].classList.remove('text-slate-500');
+        }
+
+        init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+{
+    "winter_olympics_2026": {
+        "quebec_canada": [
+            {
+                "name": "Marie-Philip Poulin",
+                "sport": "Ice Hockey",
+                "hometown": "Beauceville"
+            },
+            {
+                "name": "Ann-Renée Desbiens",
+                "sport": "Ice Hockey",
+                "hometown": "La Malbaie"
+            },
+            {
+                "name": "Mikaël Kingsbury",
+                "sport": "Freestyle Skiing (Moguls)",
+                "hometown": "Deux-Montagnes"
+            },
+            {
+                "name": "William Dandjinou",
+                "sport": "Short Track Speed Skating",
+                "hometown": "Montreal"
+            },
+            {
+                "name": "Steven Dubois",
+                "sport": "Short Track Speed Skating",
+                "hometown": "Terrebonne"
+            },
+            {
+                "name": "Kim Boutin",
+                "sport": "Short Track Speed Skating",
+                "hometown": "Sherbrooke"
+            },
+            {
+                "name": "Valérie Maltais",
+                "sport": "Long Track Speed Skating",
+                "hometown": "La Baie"
+            },
+            {
+                "name": "Laurent Dubreuil",
+                "sport": "Long Track Speed Skating",
+                "hometown": "Lévis"
+            },
+            {
+                "name": "Éliot Grondin",
+                "sport": "Snowboarding (Cross)",
+                "hometown": "Ste-Marie"
+            },
+            {
+                "name": "Laurie Blouin",
+                "sport": "Snowboarding (Slopestyle)",
+                "hometown": "Quebec City"
+            },
+            {
+                "name": "Maxime Deschamps",
+                "sport": "Figure Skating (Pairs)",
+                "hometown": "Vaudreuil-Dorion"
+            },
+            {
+                "name": "Laurence St-Germain",
+                "sport": "Alpine Skiing",
+                "hometown": "St-Ferréol-les-Neiges"
+            },
+            {
+                "name": "Antoine Cyr",
+                "sport": "Cross-Country Skiing",
+                "hometown": "Gatineau"
+            },
+            {
+                "name": "Marion Thénault",
+                "sport": "Freestyle Skiing (Aerials)",
+                "hometown": "Sherbrooke"
+            },
+            {
+                "name": "Valérie Grenier",
+                "sport": "Alpine Skiing",
+                "hometown": "St-Isidore"
+            },
+            {
+                "name": "Eli Bouchard",
+                "sport": "Snowboarding (Big Air)",
+                "hometown": "Lac-Beauport"
+            },
+            {
+                "name": "Laurianne Desmarais-Gilbert",
+                "sport": "Freestyle Skiing",
+                "hometown": "Sainte-Adèle"
+            },
+            {
+                "name": "Cédrick Brunet",
+                "sport": "Long Track Speed Skating",
+                "hometown": "Gatineau"
+            },
+            {
+                "name": "Florence Brunelle",
+                "sport": "Short Track Speed Skating",
+                "hometown": "Trois-Rivières"
+            },
+            {
+                "name": "Felix Roussel",
+                "sport": "Short Track Speed Skating",
+                "hometown": "Sherbrooke"
+            }
+        ],
+        "catalonia_spain": [
+            {
+                "name": "Queralt Castellet",
+                "sport": "Snowboarding (Halfpipe)",
+                "hometown": "Sabadell"
+            },
+            {
+                "name": "Oriol Cardona",
+                "sport": "Ski Mountaineering",
+                "hometown": "Banyoles"
+            },
+            {
+                "name": "Quim Salarich",
+                "sport": "Alpine Skiing",
+                "hometown": "Vic"
+            },
+            {
+                "name": "Nil Llop",
+                "sport": "Speed Skating",
+                "hometown": "Barcelona"
+            },
+            {
+                "name": "Tomàs-Llorenç Guarino",
+                "sport": "Figure Skating",
+                "hometown": "Barcelona"
+            },
+            {
+                "name": "Jaume Pueyo",
+                "sport": "Cross-Country Skiing",
+                "hometown": "Badalona"
+            },
+            {
+                "name": "Bernat Sellés",
+                "sport": "Cross-Country Skiing",
+                "hometown": "Lles de Cerdanya"
+            },
+            {
+                "name": "Marc Colell",
+                "sport": "Cross-Country Skiing",
+                "hometown": "La Seu d’Urgell"
+            },
+            {
+                "name": "Ot Ferrer",
+                "sport": "Ski Mountaineering",
+                "hometown": "Berga"
+            },
+            {
+                "name": "Maria Costa Díez",
+                "sport": "Ski Mountaineering",
+                "hometown": "Santpedor"
+            },
+            {
+                "name": "Nora Cornell",
+                "sport": "Snowboarding",
+                "hometown": "Barcelona"
+            }
+        ],
+        "scotland_uk": [
+            {
+                "name": "Bruce Mouat",
+                "sport": "Curling",
+                "hometown": "Edinburgh"
+            },
+            {
+                "name": "Jennifer Dodds",
+                "sport": "Curling",
+                "hometown": "Edinburgh"
+            },
+            {
+                "name": "Grant Hardie",
+                "sport": "Curling",
+                "hometown": "Dumfries"
+            },
+            {
+                "name": "Bobby Lammie",
+                "sport": "Curling",
+                "hometown": "Stranraer"
+            },
+            {
+                "name": "Hammy McMillan Jr.",
+                "sport": "Curling",
+                "hometown": "Stranraer"
+            },
+            {
+                "name": "Rebecca Morrison",
+                "sport": "Curling",
+                "hometown": "Aberdeen"
+            },
+            {
+                "name": "Sophie Jackson",
+                "sport": "Curling",
+                "hometown": "Dumfries"
+            },
+            {
+                "name": "Sophie Sinclair",
+                "sport": "Curling",
+                "hometown": "Edinburgh"
+            },
+            {
+                "name": "Fay Henderson",
+                "sport": "Curling",
+                "hometown": "Dumfries"
+            },
+            {
+                "name": "Kyle Waddell",
+                "sport": "Curling",
+                "hometown": "Bellshill"
+            },
+            {
+                "name": "Kirsty Muir",
+                "sport": "Freestyle Skiing",
+                "hometown": "Aberdeen"
+            },
+            {
+                "name": "Andrew Musgrave",
+                "sport": "Cross-Country Skiing",
+                "hometown": "Huntly"
+            },
+            {
+                "name": "James Clugnet",
+                "sport": "Cross-Country Skiing",
+                "hometown": "Scottish Pathway"
+            },
+            {
+                "name": "Anna Pryce",
+                "sport": "Cross-Country Skiing",
+                "hometown": "Scottish Pathway"
+            },
+            {
+                "name": "Chris McCormick",
+                "sport": "Freestyle Skiing",
+                "hometown": "Bearsden"
+            },
+            {
+                "name": "Lewis Gibson",
+                "sport": "Figure Skating (Ice Dance)",
+                "hometown": "Prestwick"
+            },
+            {
+                "name": "Luke Digby",
+                "sport": "Figure Skating (Pairs)",
+                "hometown": "Scottish Pathway"
+            },
+            {
+                "name": "Anastasia Vaipan-Law",
+                "sport": "Figure Skating (Pairs)",
+                "hometown": "Scottish Pathway"
+            }
+        ]
+    }
+}
