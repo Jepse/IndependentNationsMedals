@@ -273,35 +273,35 @@
     },
     {
       "rank": 20,
-      "noc": "QUE",
-      "country": "Québec",
+      "noc": "FIN",
+      "country": "Finland",
       "gold": 0,
       "silver": 0,
-      "bronze": 0,
-      "total": 0
+      "bronze": 1,
+      "total": 1
     },
     {
       "rank": 21,
-      "noc": "CAT",
-      "country": "Catalonia",
+      "noc": "GBR",
+      "country": "Great Britain",
       "gold": 0,
       "silver": 0,
-      "bronze": 0,
-      "total": 0
+      "bronze": 1,
+      "total": 1
     },
     {
       "rank": 22,
-      "noc": "SCO",
-      "country": "Scotland",
+      "noc": "AUS",
+      "country": "Australia",
       "gold": 0,
       "silver": 0,
-      "bronze": 0,
-      "total": 0
+      "bronze": 1,
+      "total": 1
     },
     {
       "rank": 23,
-      "noc": "MEX",
-      "country": "Mexico",
+      "noc": "EST",
+      "country": "Estonia",
       "gold": 0,
       "silver": 0,
       "bronze": 0,
@@ -309,8 +309,8 @@
     },
     {
       "rank": 24,
-      "noc": "ARG",
-      "country": "Argentina",
+      "noc": "UKR",
+      "country": "Ukraine",
       "gold": 0,
       "silver": 0,
       "bronze": 0,
@@ -318,8 +318,8 @@
     },
     {
       "rank": 25,
-      "noc": "ZAF",
-      "country": "South Africa",
+      "noc": "KAZ",
+      "country": "Kazakhstan",
       "gold": 0,
       "silver": 0,
       "bronze": 0,
@@ -500,35 +500,35 @@
     },
     {
       "rank": 20,
-      "noc": "FIN",
-      "country": "Finland",
+      "noc": "QUE",
+      "country": "Québec",
       "gold": 0,
       "silver": 0,
-      "bronze": 1,
-      "total": 1
+      "bronze": 0,
+      "total": 0
     },
     {
       "rank": 21,
-      "noc": "GBR",
-      "country": "Great Britain",
+      "noc": "CAT",
+      "country": "Catalonia",
       "gold": 0,
       "silver": 0,
-      "bronze": 1,
-      "total": 1
+      "bronze": 0,
+      "total": 0
     },
     {
       "rank": 22,
-      "noc": "AUS",
-      "country": "Australia",
+      "noc": "SCO",
+      "country": "Scotland",
       "gold": 0,
       "silver": 0,
-      "bronze": 1,
-      "total": 1
+      "bronze": 0,
+      "total": 0
     },
     {
       "rank": 23,
-      "noc": "EST",
-      "country": "Estonia",
+      "noc": "MEX",
+      "country": "Mexico",
       "gold": 0,
       "silver": 0,
       "bronze": 0,
@@ -536,8 +536,8 @@
     },
     {
       "rank": 24,
-      "noc": "UKR",
-      "country": "Ukraine",
+      "noc": "ARG",
+      "country": "Argentina",
       "gold": 0,
       "silver": 0,
       "bronze": 0,
@@ -545,8 +545,8 @@
     },
     {
       "rank": 25,
-      "noc": "KAZ",
-      "country": "Kazakhstan",
+      "noc": "ZAF",
+      "country": "South Africa",
       "gold": 0,
       "silver": 0,
       "bronze": 0,
