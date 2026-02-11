@@ -1,50 +1,82 @@
 [
     {
         "noc": "CAN",
-        "name": "Kim Boutin",
-        "medal": "Silver",
-        "event": "Short Track Speed Skating"
+        "name": "BOUTIN Kim",
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "total": 1
     },
     {
         "noc": "CAN",
-        "name": "Florence Brunelle",
-        "medal": "Silver",
-        "event": "Short Track Speed Skating"
+        "name": "BRUNELLE Florence",
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "total": 1
     },
     {
         "noc": "CAN",
-        "name": "William Dandjinou",
-        "medal": "Silver",
-        "event": "Short Track Speed Skating"
+        "name": "DANDJINOU William",
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "total": 1
     },
     {
         "noc": "CAN",
-        "name": "Steven Dubois",
-        "medal": "Silver",
-        "event": "Short Track Speed Skating"
+        "name": "DUBOIS Steven",
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "total": 1
     },
     {
         "noc": "CAN",
-        "name": "Felix Roussel",
-        "medal": "Silver",
-        "event": "Short Track Speed Skating"
+        "name": "ROUSSEL Felix",
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "total": 1
     },
     {
         "noc": "CAN",
-        "name": "Courtney Sarault",
-        "medal": "Silver",
-        "event": "Short Track Speed Skating"
+        "name": "SARAULT Courtney",
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "total": 1
     },
     {
         "noc": "CAN",
-        "name": "Valérie Maltais",
-        "medal": "Bronze",
-        "event": "Speed Skating"
+        "name": "GILLES Piper",
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "total": 1
     },
     {
         "noc": "CAN",
-        "name": "Megan Oldham",
-        "medal": "Bronze",
-        "event": "Freestyle Skiing"
+        "name": "MALTAIS Valerie",
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "total": 1
+    },
+    {
+        "noc": "CAN",
+        "name": "OLDHAM Megan",
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "total": 1
+    },
+    {
+        "noc": "CAN",
+        "name": "POIRIER Paul",
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "total": 1
     }
 ]
