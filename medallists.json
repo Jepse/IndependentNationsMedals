@@ -2,81 +2,61 @@
     {
         "noc": "CAN",
         "name": "Kim Boutin",
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "total": 1
+        "medal": "Silver",
+        "event": "Short Track Speed Skating"
     },
     {
         "noc": "CAN",
         "name": "Florence Brunelle",
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "total": 1
+        "medal": "Silver",
+        "event": "Short Track Speed Skating"
     },
     {
         "noc": "CAN",
         "name": "William Dandjinou",
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "total": 1
+        "medal": "Silver",
+        "event": "Short Track Speed Skating"
     },
     {
         "noc": "CAN",
         "name": "Steven Dubois",
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "total": 1
+        "medal": "Silver",
+        "event": "Short Track Speed Skating"
     },
     {
         "noc": "CAN",
         "name": "Felix Roussel",
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "total": 1
+        "medal": "Silver",
+        "event": "Short Track Speed Skating"
     },
     {
         "noc": "CAN",
         "name": "Courtney Sarault",
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "total": 1
+        "medal": "Silver",
+        "event": "Short Track Speed Skating"
     },
     {
         "noc": "CAN",
         "name": "Piper Gilles",
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "total": 1
-    },
-    {
-        "noc": "CAN",
-        "name": "Valerie Maltais",
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "total": 1
-    },
-    {
-        "noc": "CAN",
-        "name": "Megan Oldham",
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "total": 1
+        "medal": "Bronze",
+        "event": "Figure Skating"
     },
     {
         "noc": "CAN",
         "name": "Paul Poirier",
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "total": 1
+        "medal": "Bronze",
+        "event": "Figure Skating"
+    },
+    {
+        "noc": "CAN",
+        "name": "Valerie Maltais",
+        "medal": "Bronze",
+        "event": "Speed Skating"
+    },
+    {
+        "noc": "CAN",
+        "name": "Megan Oldham",
+        "medal": "Bronze",
+        "event": "Freestyle Skiing"
     }
 ]
