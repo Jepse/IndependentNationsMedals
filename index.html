@@ -190,6 +190,7 @@
                     // Only count this medal if we haven't processed it yet
                     if (!processedMedals.has(medalKey)) {
                         processedMedals.add(medalKey);
+                        if (!medallist.medal) return;
                         const medalType = medallist.medal.toLowerCase();
 
                         // Add to independent nation
@@ -354,7 +355,13 @@
             buttons[type].classList.remove('text-slate-500');
         }
 
-        init();
+        init().catch(e => {
+            console.error(e);
+            const errDiv = document.createElement('div');
+            errDiv.className = 'glass p-6 rounded-xl border-l-4 border-red-500 m-4 text-red-400 font-mono text-xs overflow-auto';
+            errDiv.innerHTML = `<strong>Error causing empty tabs:</strong><br>${e.message}<br><br>${e.stack}`;
+            document.querySelector('main').prepend(errDiv);
+        });
     </script>
 </body>
 
