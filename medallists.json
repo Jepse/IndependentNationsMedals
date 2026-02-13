@@ -37,6 +37,24 @@
     },
     {
         "noc": "CAN",
+        "name": "Courtney Sarault",
+        "medal": "Bronze",
+        "event": "Short Track Speed Skating"
+    },
+    {
+        "noc": "CAN",
+        "name": "Eliot Grondin",
+        "medal": "Silver",
+        "event": "Snowboard"
+    },
+    {
+        "noc": "CAN",
+        "name": "Mikael Kingsbury",
+        "medal": "Silver",
+        "event": "Freestyle Skiing"
+    },
+    {
+        "noc": "CAN",
         "name": "Piper Gilles",
         "medal": "Bronze",
         "event": "Figure Skating"
@@ -49,7 +67,7 @@
     },
     {
         "noc": "CAN",
-        "name": "Valerie Maltais",
+        "name": "Valérie Maltais",
         "medal": "Bronze",
         "event": "Speed Skating"
     },
