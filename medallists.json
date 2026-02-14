@@ -76,5 +76,11 @@
         "name": "Megan Oldham",
         "medal": "Bronze",
         "event": "Freestyle Skiing"
+    },
+    {
+        "noc": "CAN",
+        "name": "Laurent Dubreuil",
+        "medal": "Bronze",
+        "event": "Speed Skating"
     }
 ]
