@@ -82,5 +82,11 @@
         "name": "Laurent Dubreuil",
         "medal": "Bronze",
         "event": "Speed Skating 500m"
+    },
+    {
+        "noc": "CAN",
+        "name": "Mikael Kingsbury",
+        "medal": "Gold",
+        "event": "Freestyle Skiing"
     }
 ]
