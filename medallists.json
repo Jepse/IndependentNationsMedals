@@ -88,5 +88,35 @@
         "name": "Mikael Kingsbury",
         "medal": "Gold",
         "event": "Freestyle Skiing"
+    },
+    {
+        "noc": "CAN",
+        "name": "Valérie Maltais",
+        "medal": "Gold",
+        "event": "Speed Skating"
+    },
+    {
+        "noc": "CAN",
+        "name": "Ivanie Blondin",
+        "medal": "Gold",
+        "event": "Speed Skating"
+    },
+    {
+        "noc": "CAN",
+        "name": "Isabelle Weidemann",
+        "medal": "Gold",
+        "event": "Speed Skating"
+    },
+    {
+        "noc": "CAN",
+        "name": "Megan Oldham",
+        "medal": "Gold",
+        "event": "Freestyle Skiing"
+    },
+    {
+        "noc": "CAN",
+        "name": "Courtney Sarault",
+        "medal": "Silver",
+        "event": "Short Track Speed Skating"
     }
 ]
