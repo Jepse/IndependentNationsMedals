@@ -118,5 +118,35 @@
         "name": "Courtney Sarault",
         "medal": "Silver",
         "event": "Short Track Speed Skating"
+    },
+    {
+        "noc": "CAN",
+        "name": "Courtney Sarault",
+        "medal": "Bronze",
+        "event": "Short Track Speed Skating 1000m"
+    },
+    {
+        "noc": "CAN",
+        "name": "Steven Dubois",
+        "medal": "Gold",
+        "event": "Short Track Speed Skating 500m"
+    },
+    {
+        "noc": "CAN",
+        "name": "Kim Boutin",
+        "medal": "Bronze",
+        "event": "Short Track Speed Skating 1500m"
+    },
+    {
+        "noc": "CAN",
+        "name": "Florence Brunelle",
+        "medal": "Bronze",
+        "event": "Short Track Speed Skating 500m"
+    },
+    {
+        "noc": "CAN",
+        "name": "Danae Blais",
+        "medal": "Bronze",
+        "event": "Short Track Speed Skating 3000m Relay"
     }
 ]

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-14T22:30:00Z",
+  "lastUpdated": "2026-02-18T17:00:00Z",
   "nations": {
     "ALB": "al",
     "AND": "ad",
@@ -104,49 +104,67 @@
       "rank": 1,
       "noc": "NOR",
       "country": "Norway",
-      "gold": 14,
+      "gold": 15,
       "silver": 8,
-      "bronze": 9,
-      "total": 31
+      "bronze": 10,
+      "total": 33
     },
     {
       "rank": 2,
       "noc": "ITA",
       "country": "Italy",
       "gold": 9,
-      "silver": 4,
-      "bronze": 11,
-      "total": 24
+      "silver": 5,
+      "bronze": 12,
+      "total": 26
     },
     {
       "rank": 3,
       "noc": "USA",
       "country": "United States of America",
-      "gold": 6,
-      "silver": 10,
-      "bronze": 5,
-      "total": 21
+      "gold": 7,
+      "silver": 11,
+      "bronze": 6,
+      "total": 24
     },
     {
       "rank": 4,
-      "noc": "NED",
-      "country": "Netherlands",
+      "noc": "FRA",
+      "country": "France",
       "gold": 6,
-      "silver": 6,
-      "bronze": 1,
-      "total": 13
+      "silver": 7,
+      "bronze": 4,
+      "total": 17
     },
     {
       "rank": 5,
+      "noc": "NED",
+      "country": "Netherlands",
+      "gold": 6,
+      "silver": 7,
+      "bronze": 2,
+      "total": 15
+    },
+    {
+      "rank": 6,
+      "noc": "SWE",
+      "country": "Sweden",
+      "gold": 6,
+      "silver": 6,
+      "bronze": 3,
+      "total": 15
+    },
+    {
+      "rank": 7,
       "noc": "GER",
       "country": "Germany",
       "gold": 5,
       "silver": 8,
-      "bronze": 7,
-      "total": 20
+      "bronze": 8,
+      "total": 21
     },
     {
-      "rank": 6,
+      "rank": 8,
       "noc": "AUT",
       "country": "Austria",
       "gold": 5,
@@ -155,58 +173,40 @@
       "total": 17
     },
     {
-      "rank": 7,
-      "noc": "FRA",
-      "country": "France",
-      "gold": 5,
-      "silver": 7,
-      "bronze": 4,
-      "total": 16
-    },
-    {
-      "rank": 8,
-      "noc": "SWE",
-      "country": "Sweden",
-      "gold": 5,
-      "silver": 5,
-      "bronze": 2,
-      "total": 12
-    },
-    {
       "rank": 9,
-      "noc": "SUI",
-      "country": "Switzerland",
+      "noc": "JPN",
+      "country": "Japan",
       "gold": 5,
-      "silver": 2,
-      "bronze": 3,
-      "total": 10
+      "silver": 6,
+      "bronze": 11,
+      "total": 22
     },
     {
       "rank": 10,
-      "noc": "JPN",
-      "country": "Japan",
-      "gold": 4,
-      "silver": 5,
-      "bronze": 10,
-      "total": 19
+      "noc": "SUI",
+      "country": "Switzerland",
+      "gold": 5,
+      "silver": 4,
+      "bronze": 3,
+      "total": 12
     },
     {
       "rank": 11,
       "noc": "CAN",
       "country": "Canada",
-      "gold": 3,
+      "gold": 4,
       "silver": 4,
-      "bronze": 5,
-      "total": 12
+      "bronze": 6,
+      "total": 14
     },
     {
       "rank": 12,
       "noc": "AUS",
       "country": "Australia",
       "gold": 3,
-      "silver": 1,
+      "silver": 2,
       "bronze": 1,
-      "total": 5
+      "total": 6
     },
     {
       "rank": 13,
@@ -219,6 +219,24 @@
     },
     {
       "rank": 14,
+      "noc": "CHN",
+      "country": "People's Republic of China",
+      "gold": 2,
+      "silver": 3,
+      "bronze": 4,
+      "total": 9
+    },
+    {
+      "rank": 15,
+      "noc": "KOR",
+      "country": "Republic of Korea",
+      "gold": 2,
+      "silver": 2,
+      "bronze": 3,
+      "total": 7
+    },
+    {
+      "rank": 16,
       "noc": "CZE",
       "country": "Czechia",
       "gold": 2,
@@ -227,7 +245,7 @@
       "total": 4
     },
     {
-      "rank": 15,
+      "rank": 17,
       "noc": "SLO",
       "country": "Slovenia",
       "gold": 2,
@@ -236,16 +254,7 @@
       "total": 4
     },
     {
-      "rank": 16,
-      "noc": "KOR",
-      "country": "Republic of Korea",
-      "gold": 1,
-      "silver": 2,
-      "bronze": 3,
-      "total": 6
-    },
-    {
-      "rank": 17,
+      "rank": 18,
       "noc": "BRA",
       "country": "Brazil",
       "gold": 1,
@@ -254,22 +263,13 @@
       "total": 1
     },
     {
-      "rank": 17,
+      "rank": 18,
       "noc": "KAZ",
       "country": "Kazakhstan",
       "gold": 1,
       "silver": 0,
       "bronze": 0,
       "total": 1
-    },
-    {
-      "rank": 19,
-      "noc": "CHN",
-      "country": "People's Republic of China",
-      "gold": 0,
-      "silver": 3,
-      "bronze": 3,
-      "total": 6
     },
     {
       "rank": 20,
@@ -282,17 +282,17 @@
     },
     {
       "rank": 21,
-      "noc": "LAT",
-      "country": "Latvia",
-      "gold": 0,
-      "silver": 1,
-      "bronze": 1,
-      "total": 2
-    },
-    {
-      "rank": 21,
       "noc": "NZL",
       "country": "New Zealand",
+      "gold": 0,
+      "silver": 2,
+      "bronze": 1,
+      "total": 3
+    },
+    {
+      "rank": 22,
+      "noc": "LAT",
+      "country": "Latvia",
       "gold": 0,
       "silver": 1,
       "bronze": 1,
@@ -340,49 +340,67 @@
       "rank": 1,
       "noc": "NOR",
       "country": "Norway",
-      "gold": 14,
+      "gold": 15,
       "silver": 8,
-      "bronze": 9,
-      "total": 31
+      "bronze": 10,
+      "total": 33
     },
     {
       "rank": 2,
       "noc": "ITA",
       "country": "Italy",
       "gold": 9,
-      "silver": 4,
-      "bronze": 11,
-      "total": 24
+      "silver": 5,
+      "bronze": 12,
+      "total": 26
     },
     {
       "rank": 3,
       "noc": "USA",
       "country": "United States of America",
-      "gold": 6,
-      "silver": 10,
-      "bronze": 5,
-      "total": 21
+      "gold": 7,
+      "silver": 11,
+      "bronze": 6,
+      "total": 24
     },
     {
       "rank": 4,
-      "noc": "NED",
-      "country": "Netherlands",
+      "noc": "FRA",
+      "country": "France",
       "gold": 6,
-      "silver": 6,
-      "bronze": 1,
-      "total": 13
+      "silver": 7,
+      "bronze": 4,
+      "total": 17
     },
     {
       "rank": 5,
+      "noc": "NED",
+      "country": "Netherlands",
+      "gold": 6,
+      "silver": 7,
+      "bronze": 2,
+      "total": 15
+    },
+    {
+      "rank": 6,
+      "noc": "SWE",
+      "country": "Sweden",
+      "gold": 6,
+      "silver": 6,
+      "bronze": 3,
+      "total": 15
+    },
+    {
+      "rank": 7,
       "noc": "GER",
       "country": "Germany",
       "gold": 5,
       "silver": 8,
-      "bronze": 7,
-      "total": 20
+      "bronze": 8,
+      "total": 21
     },
     {
-      "rank": 6,
+      "rank": 8,
       "noc": "AUT",
       "country": "Austria",
       "gold": 5,
@@ -391,58 +409,40 @@
       "total": 17
     },
     {
-      "rank": 7,
-      "noc": "FRA",
-      "country": "France",
-      "gold": 5,
-      "silver": 7,
-      "bronze": 4,
-      "total": 16
-    },
-    {
-      "rank": 8,
-      "noc": "SWE",
-      "country": "Sweden",
-      "gold": 5,
-      "silver": 5,
-      "bronze": 2,
-      "total": 12
-    },
-    {
       "rank": 9,
-      "noc": "SUI",
-      "country": "Switzerland",
+      "noc": "JPN",
+      "country": "Japan",
       "gold": 5,
-      "silver": 2,
-      "bronze": 3,
-      "total": 10
+      "silver": 6,
+      "bronze": 11,
+      "total": 22
     },
     {
       "rank": 10,
-      "noc": "JPN",
-      "country": "Japan",
-      "gold": 4,
-      "silver": 5,
-      "bronze": 10,
-      "total": 19
+      "noc": "SUI",
+      "country": "Switzerland",
+      "gold": 5,
+      "silver": 4,
+      "bronze": 3,
+      "total": 12
     },
     {
       "rank": 11,
       "noc": "CAN",
       "country": "Canada",
-      "gold": 3,
+      "gold": 4,
       "silver": 4,
-      "bronze": 5,
-      "total": 12
+      "bronze": 6,
+      "total": 14
     },
     {
       "rank": 12,
       "noc": "AUS",
       "country": "Australia",
       "gold": 3,
-      "silver": 1,
+      "silver": 2,
       "bronze": 1,
-      "total": 5
+      "total": 6
     },
     {
       "rank": 13,
@@ -455,6 +455,24 @@
     },
     {
       "rank": 14,
+      "noc": "CHN",
+      "country": "People's Republic of China",
+      "gold": 2,
+      "silver": 3,
+      "bronze": 4,
+      "total": 9
+    },
+    {
+      "rank": 15,
+      "noc": "KOR",
+      "country": "Republic of Korea",
+      "gold": 2,
+      "silver": 2,
+      "bronze": 3,
+      "total": 7
+    },
+    {
+      "rank": 16,
       "noc": "CZE",
       "country": "Czechia",
       "gold": 2,
@@ -463,7 +481,7 @@
       "total": 4
     },
     {
-      "rank": 15,
+      "rank": 17,
       "noc": "SLO",
       "country": "Slovenia",
       "gold": 2,
@@ -472,16 +490,7 @@
       "total": 4
     },
     {
-      "rank": 16,
-      "noc": "KOR",
-      "country": "Republic of Korea",
-      "gold": 1,
-      "silver": 2,
-      "bronze": 3,
-      "total": 6
-    },
-    {
-      "rank": 17,
+      "rank": 18,
       "noc": "BRA",
       "country": "Brazil",
       "gold": 1,
@@ -490,22 +499,13 @@
       "total": 1
     },
     {
-      "rank": 17,
+      "rank": 18,
       "noc": "KAZ",
       "country": "Kazakhstan",
       "gold": 1,
       "silver": 0,
       "bronze": 0,
       "total": 1
-    },
-    {
-      "rank": 19,
-      "noc": "CHN",
-      "country": "People's Republic of China",
-      "gold": 0,
-      "silver": 3,
-      "bronze": 3,
-      "total": 6
     },
     {
       "rank": 20,
@@ -518,17 +518,17 @@
     },
     {
       "rank": 21,
-      "noc": "LAT",
-      "country": "Latvia",
-      "gold": 0,
-      "silver": 1,
-      "bronze": 1,
-      "total": 2
-    },
-    {
-      "rank": 21,
       "noc": "NZL",
       "country": "New Zealand",
+      "gold": 0,
+      "silver": 2,
+      "bronze": 1,
+      "total": 3
+    },
+    {
+      "rank": 22,
+      "noc": "LAT",
+      "country": "Latvia",
       "gold": 0,
       "silver": 1,
       "bronze": 1,
@@ -573,7 +573,7 @@
     {
       "rank": 27,
       "noc": "QUE",
-      "country": "Québec",
+      "country": "Qu\u00e9bec",
       "gold": 0,
       "silver": 0,
       "bronze": 0,
